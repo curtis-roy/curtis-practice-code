@@ -1,0 +1,12 @@
+# .gitignore file specific to /home/croy/my_iea_code/practice-code/curtis-practice-code
+
+# throwaway files created for lab use only
+
+./empty*
+./not_empty*
+./bar.foo
+./blah.a
+./foo.bar
+./forwards
+./reversed
+./something.a
