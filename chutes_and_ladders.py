@@ -33,11 +33,11 @@ def play(player, square):
     while True:
         roll = random.randint(1,6)
         sys.stdout.write("Player {0} on square {1}, rolls a {2}".format(player, square, roll))
-    if square + roll > 100:
-        print (" but cannot move.")
-    else:
-        square += roll
-        print (" and moves to square {0}".format(square))
+        if square + roll > 100:
+            print (" but cannot move.")
+        else:
+            square += roll
+            print (" and moves to square {0}".format(square))
         if square == 100:
             return 100
         turn = snl.get(square, square)
@@ -49,9 +49,9 @@ def play(player, square):
         elif square > turn:
             print ("Oops! Landed on a chute. Slide down to {0}.".format(turn))
             square = turn
-    if roll < 6 or not SIXES_ROLL_AGAIN:
-        return square
-    print ("Rolled a 6 so roll again.")
+        if roll < 6 or not SIXES_ROLL_AGAIN:
+            return square
+        print ("Rolled a 6 so roll again.")
 
 def main():
     """Players"""
